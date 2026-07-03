@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt(),i;
+       int arr[]=new int[n];
+       for(i=0;i<n;i++)
+       {
+        arr[i]=sc.nextInt();
+       } 
+       int l=0,r=n-1,temp=0;
+       while(l<r)
+       {
+        temp=arr[l];
+        arr[l]=arr[r];
+        arr[r]=temp;
+        l++;
+        r--;
+       }
+       for(i=0;i<n;i++)
+       {
+        System.out.print(arr[i]+" ");
+       }
+    }
+}
