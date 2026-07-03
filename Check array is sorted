@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt(),i,j,t=1;
+       int arr[]=new int[n];
+       int arr1[]=new int[n];
+       for(i=0;i<n;i++)
+       {
+          arr[i]=sc.nextInt();
+          arr1[i]=arr[i];
+       }
+       Arrays.sort(arr);
+       for(i=0;i<n;i++)
+       {
+       if(arr[i]!=arr1[i])
+       {
+        t=0;
+       }
+       }
+       if(t==1)
+       {
+        System.out.println("Yes");
+       }
+       else
+       {
+        System.out.println("No");
+       }
+    }
+}
